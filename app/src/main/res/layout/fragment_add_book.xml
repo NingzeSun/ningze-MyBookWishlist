@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id = "@+id/title_addText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Book Title (up to 50 characters)"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id = "@+id/author_addText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Book Author (up to 30 characters)"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id = "@+id/genre_addText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Book Genre"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id = "@+id/year_addText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Book Publication Year (four-digit-integer)"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id = "@+id/status_addText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint = "Status (Read/Unread)"
+        android:inputType="textPersonName" />
+
+
+</LinearLayout>

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ningze-MyBookWishlist</string>
+    <string name="publication_year">Publication Year</string>
+    <string name="book_genre">Book Genre</string>
+    <string name="book_author">Book Author</string>
+    <string name="book_title">Book Title</string>
+    <string name="reading_status">Reading Status</string>
 </resources>
