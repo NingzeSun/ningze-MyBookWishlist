@@ -1,3 +1,11 @@
+/* AddBookFragment is a DialogFragment subclass designed to present a dialog interface for adding a new book to a user's book wishlist within an Android application.
+The design rationale behind AddBookFragment includes:
+    Modularity: By encapsulating the add book dialog in a fragment, the code related to adding a book is kept separate from the rest of the application's code, promoting cleaner and more organized codebase.
+    Lifecycle Management: As a DialogFragment, it benefits from the fragment lifecycle, ensuring that the dialog behaves correctly through configuration changes and other lifecycle events.
+    Communication with Host: It defines an AddBookDialogListener interface that the host must implement to receive the book details once the user completes the form, establishing a clear contract for communication.
+    UI Flexibility: It inflates a custom layout for the dialog, allowing for a tailored user interface that can be adjusted or expanded more easily than a standard dialog.
+    Error Handling: It enforces the implementation of the AddBookDialogListener in the host with a runtime check during the onAttach method, preventing class cast exceptions at runtime. */
+
 package com.example.ningze_mybookwishlist;
 
 import android.app.AlertDialog;
@@ -12,6 +20,8 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.ningze_mybookwishlist.Book;
 
 public class AddBookFragment extends DialogFragment {
     public interface AddBookDialogListener{
@@ -36,6 +46,10 @@ public class AddBookFragment extends DialogFragment {
         }
     }
 
+    /* citation begins
+       URL: https://eclass.srv.ualberta.ca/pluginfile.php/10617023/mod_resource/content/5/Lab%203%20Instructions%20%5BWinter%202023%5D.pdf
+       Author: Junwen Shen
+       Date: unknown */
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState){
@@ -45,6 +59,7 @@ public class AddBookFragment extends DialogFragment {
         genreName = view.findViewById(R.id.genre_addText);
         yearName = view.findViewById(R.id.year_addText);
         statusName = view.findViewById(R.id.status_addText);
+
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         return builder
@@ -63,6 +78,7 @@ public class AddBookFragment extends DialogFragment {
                     }
                 }).create();
     }
+    /* citation ends */
 
 
 }

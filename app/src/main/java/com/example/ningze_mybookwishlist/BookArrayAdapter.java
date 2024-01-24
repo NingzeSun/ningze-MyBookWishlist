@@ -1,4 +1,10 @@
-/* a customized ArrayAdapter that could display extra information */
+/* BookArrayAdapter is a custom ArrayAdapter<Book> designed for displaying a list of Book objects in a ListView within an Android application. */
+/* The design rationale behind BookArrayAdapter includes:
+    Customization: It overrides the getView method to create a custom view for each item in the list, populating it with the book's details such as title, author, genre, and status.
+    Performance: It uses the view recycling pattern by checking if the convertView is null before inflating a new view, which enhances the performance of the ListView when scrolling.
+    Simplicity: The adapter takes an ArrayList<Book> and a Context as arguments, simplifying the process of connecting data to the ListView.
+    Contextual Awareness: It holds a reference to the Context to access resources and the application environment, necessary for inflating views. */
+
 package com.example.ningze_mybookwishlist;
 
 import android.content.Context;
