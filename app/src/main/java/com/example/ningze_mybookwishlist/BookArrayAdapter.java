@@ -4,7 +4,7 @@
     Performance: It uses the view recycling pattern by checking if the convertView is null before inflating a new view, which enhances the performance of the ListView when scrolling.
     Simplicity: The adapter takes an ArrayList<Book> and a Context as arguments, simplifying the process of connecting data to the ListView.
     Contextual Awareness: It holds a reference to the Context to access resources and the application environment, necessary for inflating views. */
-
+/* No outstanding issues */
 package com.example.ningze_mybookwishlist;
 
 import android.content.Context;

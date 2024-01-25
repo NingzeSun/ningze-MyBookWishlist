@@ -1,3 +1,10 @@
+/*The EditDeleteBookFragment class is a DialogFragment designed to provide a user interface for editing or deleting a book entry.
+The design rationale behind this class includes:
+    Modularity and Reusability: By encapsulating the edit and delete functionalities within a DialogFragment, the logic for these actions can be reused wherever needed in the application.
+    User Experience: The dialog provides a focused context for the user to make changes to a book or remove it, without leaving the current workflow or navigating to a different screen.
+    Interface Implementation: The EditDeleteBookDialogListener interface is defined within this class to ensure that the calling context (usually an Activity or another Fragment) implements the necessary callback methods (editBook and deleteBook). This enforces a contract that the calling context must handle the actions triggered by the dialog.
+*/
+/* No Outstanding issues */
 package com.example.ningze_mybookwishlist;
 
 import android.app.AlertDialog;

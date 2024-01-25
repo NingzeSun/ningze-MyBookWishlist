@@ -1,4 +1,5 @@
 /* A Book class which contains all attributes needed, with getter and setter methods */
+/* No outstanding issues */
 package com.example.ningze_mybookwishlist;
 
 import java.io.Serializable;

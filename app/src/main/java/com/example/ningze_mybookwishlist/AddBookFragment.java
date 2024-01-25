@@ -5,7 +5,7 @@ The design rationale behind AddBookFragment includes:
     Communication with Host: It defines an AddBookDialogListener interface that the host must implement to receive the book details once the user completes the form, establishing a clear contract for communication.
     UI Flexibility: It inflates a custom layout for the dialog, allowing for a tailored user interface that can be adjusted or expanded more easily than a standard dialog.
     Error Handling: It enforces the implementation of the AddBookDialogListener in the host with a runtime check during the onAttach method, preventing class cast exceptions at runtime. */
-
+/* No outstanding issues */
 package com.example.ningze_mybookwishlist;
 
 import android.app.AlertDialog;
