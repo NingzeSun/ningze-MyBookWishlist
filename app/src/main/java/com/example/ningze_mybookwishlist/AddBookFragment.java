@@ -21,7 +21,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import com.example.ningze_mybookwishlist.Book;
 
 public class AddBookFragment extends DialogFragment {
     public interface AddBookDialogListener{
@@ -46,7 +45,7 @@ public class AddBookFragment extends DialogFragment {
         }
     }
 
-    /* citation begins
+    /* Citation begins
        URL: https://eclass.srv.ualberta.ca/pluginfile.php/10617023/mod_resource/content/5/Lab%203%20Instructions%20%5BWinter%202023%5D.pdf
        Author: Junwen Shen
        Date: unknown */
@@ -78,7 +77,7 @@ public class AddBookFragment extends DialogFragment {
                     }
                 }).create();
     }
-    /* citation ends */
+    /* Citation ends */
 
 
 }

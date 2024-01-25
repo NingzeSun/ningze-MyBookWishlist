@@ -51,6 +51,11 @@ public class EditDeleteBookFragment extends DialogFragment {
         }
     }
 
+    /* Citation begins */
+    /* URL:https://eclass.srv.ualberta.ca/mod/assign/view.php?id=7590772
+       Author: unknown
+       Date: 2024-01-25
+     */
     public static EditDeleteBookFragment newInstance(Book book) {
         EditDeleteBookFragment fragment = new EditDeleteBookFragment();
         Bundle args = new Bundle();
@@ -58,14 +63,14 @@ public class EditDeleteBookFragment extends DialogFragment {
         fragment.setArguments(args);
         return fragment;
     }
+    /* Citation ends */
 
     @Override
     @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            Book city = (Book) getArguments().getSerializable("book");
-            // Use city to populate your edit fields
+            Book book = (Book) getArguments().getSerializable("book");
         }
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.edit_delete_book_layout, null);
 
@@ -94,7 +99,7 @@ public class EditDeleteBookFragment extends DialogFragment {
                 .setView(view)
                 .setTitle("Edit/Delete City")
                 .setNegativeButton("Cancel", null)
-                /* citation begins */
+                /* Citation begins */
                 /* URL: https://www.phind.com/search
                    Author: Phind, ChatGPT-4 engine, owned by Phind
                    Prompt: Can I set two positive buttons for the builder?
@@ -107,7 +112,7 @@ public class EditDeleteBookFragment extends DialogFragment {
                         listener.deleteBook();
                     }
                 })
-                /* citation ends */
+                /* Citation ends */
                 .setPositiveButton("OK", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i){
