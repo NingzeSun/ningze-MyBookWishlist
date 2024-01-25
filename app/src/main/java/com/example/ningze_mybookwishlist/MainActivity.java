@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
     @Override
     public void editBook(Book newBook){
         Book bookToEdit = bookDataList.get(selectedBookIndex);
-        if (!TextUtils.isEmpty(newBook.getTitle())) {
+        if (!TextUtils.isEmpty(newBook.getTitle()) && newBook.getTitle().length() < 50) {
             // If cityName is not empty, set the city name
             bookToEdit.setTitleName(newBook.getTitle());
         }
-        if (!TextUtils.isEmpty(newBook.getAuthor())) {
+        if (!TextUtils.isEmpty(newBook.getAuthor()) && newBook.getAuthor().length() < 30) {
             // If cityName is not empty, set the city name
             bookToEdit.setAuthorName(newBook.getAuthor());
         }
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
             // If cityName is not empty, set the city name
             bookToEdit.setGenreName(newBook.getGenre());
         }
-        if (!TextUtils.isEmpty(newBook.getYear())) {
+        if (!TextUtils.isEmpty(newBook.getYear()) && newBook.getYear().length() == 4) {
             // If cityName is not empty, set the city name
             bookToEdit.setYearName(newBook.getYear());
         }

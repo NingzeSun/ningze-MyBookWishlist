@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -25,6 +26,12 @@ public class EditDeleteBookFragment extends DialogFragment {
     private EditText genreName;
     private EditText yearName;
     private EditText statusName;
+
+    private TextView detailTitle;
+    private TextView detailAuthor;
+    private TextView detailGenre;
+    private TextView detailYear;
+    private TextView detailStatus;
 
 
     public interface EditDeleteBookDialogListener {
@@ -61,6 +68,22 @@ public class EditDeleteBookFragment extends DialogFragment {
             // Use city to populate your edit fields
         }
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.edit_delete_book_layout, null);
+
+        detailTitle = view.findViewById(R.id.detailTitle);
+        detailAuthor = view.findViewById(R.id.detailAuthor);
+        detailGenre = view.findViewById(R.id.detailGenre);
+        detailYear = view.findViewById(R.id.detailYear);
+        detailStatus = view.findViewById(R.id.detailStatus);
+        if (getArguments() != null) {
+            Book book = (Book) getArguments().getSerializable("book");
+            // Set the text for the TextViews with labels
+            detailTitle.setText("Title: " + book.getTitle());
+            detailAuthor.setText("Author: " + book.getAuthor());
+            detailGenre.setText("Genre: " + book.getGenre());
+            detailYear.setText("Publication Year: " + book.getYear());
+            detailStatus.setText("Status: " + book.getStatus());
+        }
+
         titleName = view.findViewById(R.id.title_editDeleteText);
         authorName = view.findViewById(R.id.author_editDeleteText);
         genreName = view.findViewById(R.id.genre_editDeleteText);
@@ -69,8 +92,14 @@ public class EditDeleteBookFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         return builder
                 .setView(view)
-                .setTitle("Edit City")
+                .setTitle("Edit/Delete City")
                 .setNegativeButton("Cancel", null)
+                /* citation begins */
+                /* URL: https://www.phind.com/search
+                   Author: Phind, ChatGPT-4 engine, owned by Phind
+                   prompt: Can I set two positive buttons for the builder?
+                   Date: 2024-01-24
+                 */
                 .setNeutralButton("Delete", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i){
@@ -78,6 +107,7 @@ public class EditDeleteBookFragment extends DialogFragment {
                         listener.deleteBook();
                     }
                 })
+                /* citation ends */
                 .setPositiveButton("OK", new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i){

@@ -7,11 +7,11 @@
     <string name="reading_status">Reading Status</string>
     <string name="book_title_up_to_50_characters">Book Title (up to 50 characters)</string>
     <string name="book_author_up_to_30_characters">Book Author (up to 30 characters)</string>
-    <string name="enter_book_title_to_edit_or_delete_up_to_50_characters">Enter Book Title to edit or delete (up to 50 characters)</string>
     <string name="edit_book_author_up_to_30_characters">Edit Book Author (up to 30 characters)</string>
     <string name="edit_book_genre">Edit Book Genre</string>
     <string name="edit_book_publication_year_four_digit_integer">Edit Book Publication Year (four-digit-integer)</string>
     <string name="edit_status_read_unread">Edit Status (Read/Unread)</string>
     <string name="book_publication_year_four_digit_integer">Book Publication Year (four-digit-integer)</string>
     <string name="status_read_unread">Status (Read/Unread)</string>
+    <string name="enter_book_title_to_edit_up_to_50_characters" />
 </resources>
