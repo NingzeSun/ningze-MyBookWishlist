@@ -13,5 +13,5 @@
     <string name="edit_status_read_unread">Edit Status (Read/Unread)</string>
     <string name="book_publication_year_four_digit_integer">Book Publication Year (four-digit-integer)</string>
     <string name="status_read_unread">Status (Read/Unread)</string>
-    <string name="enter_book_title_to_edit_up_to_50_characters" />
+    <string name="enter_book_title_to_edit_up_to_50_characters">Enter_book_title_to_edit_up_to_50_characters</string>
 </resources>

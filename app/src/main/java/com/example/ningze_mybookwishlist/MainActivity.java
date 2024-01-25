@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -18,7 +19,12 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
     private ArrayList<Book> bookDataList;
     private ListView bookList;
     private ArrayAdapter<Book> bookAdapter;
-    int selectedBookIndex;
+    private int selectedBookIndex;
+    private int wishlistCount;
+    private int readCount;
+
+    private TextView wishlistCountTextView;
+    private TextView readCountTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,11 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
         bookList = findViewById(R.id.book_list);
         bookAdapter = new BookArrayAdapter(bookDataList, this);
         bookList.setAdapter(bookAdapter);
+
+        wishlistCountTextView = findViewById(R.id.wishlist_count);
+        readCountTextView = findViewById((R.id.read_count));
+
+        updateCounts();
 
         bookList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -51,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
     @Override
     public void addBook(Book newbook){
         bookAdapter.add(newbook);
+        updateCounts();
+        bookAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -76,12 +89,28 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
             // If cityName is not empty, set the city name
             bookToEdit.setStatusName(newBook.getStatus());
         }
+        bookAdapter.notifyDataSetChanged();
+        updateCounts();;
     }
     @Override
     public void deleteBook(){
         Book bookToDelete = bookDataList.get(selectedBookIndex);
         bookDataList.remove(bookToDelete);
         bookAdapter.notifyDataSetChanged(); // Notify the adapter
+        updateCounts();
     }
+
+    public void updateCounts() {
+        wishlistCount = bookDataList.size();
+        readCount = 0;
+        for (Book book : bookDataList) {
+            if ("Read".equals(book.getStatus())) {
+                readCount++;
+            }
+        }
+        wishlistCountTextView.setText("Total Wishlist Count: " + wishlistCount);
+        readCountTextView.setText("Read Books Count: " + readCount);
+    }
+
 
 }

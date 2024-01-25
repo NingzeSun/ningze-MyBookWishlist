@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class BookArrayAdapter extends  ArrayAdapter<Book>{
     private ArrayList<Book> books;
     private Context context;
-    int selectedbookindex;
+    private int selectedbookindex;
     public BookArrayAdapter(ArrayList<Book> books, Context context){
         super(context, 0, books);
         this.books = books;

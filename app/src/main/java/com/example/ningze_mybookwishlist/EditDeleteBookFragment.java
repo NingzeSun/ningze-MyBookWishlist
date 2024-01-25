@@ -97,7 +97,7 @@ public class EditDeleteBookFragment extends DialogFragment {
                 /* citation begins */
                 /* URL: https://www.phind.com/search
                    Author: Phind, ChatGPT-4 engine, owned by Phind
-                   prompt: Can I set two positive buttons for the builder?
+                   Prompt: Can I set two positive buttons for the builder?
                    Date: 2024-01-24
                  */
                 .setNeutralButton("Delete", new DialogInterface.OnClickListener(){
