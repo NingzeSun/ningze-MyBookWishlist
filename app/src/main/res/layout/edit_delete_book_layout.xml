@@ -5,43 +5,43 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id = "@+id/title_addText"
+        android:id = "@+id/title_editDeleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint = "@string/book_title_up_to_50_characters"
+        android:hint = "@string/enter_book_title_to_edit_or_delete_up_to_50_characters"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id = "@+id/author_addText"
+        android:id = "@+id/author_editDeleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint = "@string/book_author_up_to_30_characters"
+        android:hint = "@string/edit_book_author_up_to_30_characters"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id = "@+id/genre_addText"
+        android:id = "@+id/genre_editDeleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint = "@string/book_genre"
+        android:hint = "@string/edit_book_genre"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id = "@+id/year_addText"
+        android:id = "@+id/year_editDeleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint = "@string/book_publication_year_four_digit_integer"
+        android:hint = "@string/edit_book_publication_year_four_digit_integer"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id = "@+id/status_addText"
+        android:id = "@+id/status_editDeleteText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint = "@string/status_read_unread"
+        android:hint = "@string/edit_status_read_unread"
         android:inputType="textPersonName" />
 
 

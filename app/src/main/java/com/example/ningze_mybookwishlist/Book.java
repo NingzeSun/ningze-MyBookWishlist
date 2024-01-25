@@ -37,4 +37,24 @@ public class Book implements Serializable {
     public String getStatus() {
         return status;
     }
+
+    public void setTitleName(String title) {
+        this.title = title;
+    }
+
+    public void setAuthorName(String author) {
+        this.author = author;
+    }
+
+    public void setGenreName(String genre) {
+        this.genre = genre;
+    }
+
+    public void setYearName(String year) {
+        this.year = year;
+    }
+
+    public void setStatusName(String status) {
+        this.status = status;
+    }
 }
