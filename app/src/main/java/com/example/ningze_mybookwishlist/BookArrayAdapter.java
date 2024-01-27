@@ -5,6 +5,8 @@
     Simplicity: The adapter takes an ArrayList<Book> and a Context as arguments, simplifying the process of connecting data to the ListView.
     Contextual Awareness: It holds a reference to the Context to access resources and the application environment, necessary for inflating views. */
 /* No outstanding issues */
+/* Author: Ningze Sun */
+
 package com.example.ningze_mybookwishlist;
 
 import android.content.Context;

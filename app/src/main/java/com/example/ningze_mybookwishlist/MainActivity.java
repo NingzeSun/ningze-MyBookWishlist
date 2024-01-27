@@ -1,3 +1,6 @@
+/* No outstanding issue */
+/* Author: Ningze Sun */
+
 package com.example.ningze_mybookwishlist;
 
 import androidx.appcompat.app.AppCompatActivity;

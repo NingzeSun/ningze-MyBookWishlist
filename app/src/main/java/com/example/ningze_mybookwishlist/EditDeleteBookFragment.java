@@ -5,6 +5,8 @@ The design rationale behind this class includes:
     Interface Implementation: The EditDeleteBookDialogListener interface is defined within this class to ensure that the calling context (usually an Activity or another Fragment) implements the necessary callback methods (editBook and deleteBook). This enforces a contract that the calling context must handle the actions triggered by the dialog.
 */
 /* No Outstanding issues */
+/* Author: Ningze Sun */
+
 package com.example.ningze_mybookwishlist;
 
 import android.app.AlertDialog;
@@ -56,7 +58,7 @@ public class EditDeleteBookFragment extends DialogFragment {
        Author: unknown
        Date: 2024-01-25
      */
-    public static EditDeleteBookFragment newInstance(Book book) {
+public static EditDeleteBookFragment newInstance(Book book) {
         EditDeleteBookFragment fragment = new EditDeleteBookFragment();
         Bundle args = new Bundle();
         args.putSerializable("book", book);
