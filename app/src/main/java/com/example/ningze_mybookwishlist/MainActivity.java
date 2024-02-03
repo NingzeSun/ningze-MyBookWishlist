@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements AddBookFragment.A
             // If cityName is not empty, set the city name
             bookToEdit.setGenreName(newBook.getGenre());
         }
-        if (!TextUtils.isEmpty(newBook.getYear()) && newBook.getYear().length() == 4) {
+        if (!TextUtils.isEmpty(newBook.getYear()) && newBook.getYear().length() == 4 && newBook.getYear().matches("[0-9]+")) {
             // If cityName is not empty, set the city name
             bookToEdit.setYearName(newBook.getYear());
         }
